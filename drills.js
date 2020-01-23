@@ -108,3 +108,75 @@ Array.SIZE_RATIO = 3;
 // };
 
 // console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny'));
+
+// const product = input => {
+//   let result = [];
+//   for (let i = 0; i < input.length; i++) {
+//     let newVal = 1;
+//     for (let k = 0; k < input.length; k++) {
+//       if (i !== k) {
+//         newVal = newVal * input[k];
+//       }
+//     }
+//     result.push(newVal);
+//   }
+//   return result;
+// };
+
+// console.log(product([1, 3, 9, 4]));
+
+// const twoD = input => {
+//   let result = input;
+//   let rows = [];
+//   let columns = [];
+
+//   for (let i = 0; i < input.length; i++) {
+//     for (let k = 0; k < input[0].length; k++) {
+//       if (input[i][k] === 0) {
+//         rows.push(i);
+//         columns.push(k);
+//       }
+//     }
+//   }
+
+//   rows.forEach(item => {
+//     for (let i = 0; i < result[0].length; i++) {
+//       result[item][i] = 0;
+//     }
+//   });
+
+//   columns.forEach(item => {
+//     for (let i = 0; i < result.length; i++) {
+//       result[i][item] = 0;
+//     }
+//   });
+
+//   return result;
+// };
+
+// console.log(
+//   twoD([
+//     [1, 0, 1, 1, 0],
+//     [0, 1, 1, 1, 0],
+//     [1, 1, 1, 1, 1],
+//     [1, 0, 1, 1, 1],
+//     [1, 1, 1, 1, 1]
+//   ])
+// );
+
+// const stringRotation = (input1, input2) => {
+//   if (input1.length !== input2.length) {
+//     return false;
+//   }
+//   for (let i = 1; i < input1.length; i++) {
+//     if (
+//       input1.substring(0, i) ===
+//       input2.substring(input1.length - i, input1.length)
+//     ) {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+
+// console.log(stringRotation('amazon', 'azonam'));
