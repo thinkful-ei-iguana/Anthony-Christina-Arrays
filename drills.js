@@ -18,6 +18,15 @@ class Array {
     this.length++;
   }
 
+  pop() {
+    if (this.length == 0) {
+      throw new Error('Index error');
+    }
+    const value = memoryInstance.get(this.ptr + this.length - 1);
+    this.length--;
+    return value;
+  }
+
   _resize(size) {
     const oldPtr = this.ptr;
     this.ptr = memoryInstance.allocate(size);
@@ -46,7 +55,7 @@ function main() {
   arr.pop();
   arr.pop();
 
-  console.log(arr);
+  console.log(arr[0]);
 }
 
 main();
