@@ -40,22 +40,35 @@ class Array {
 }
 Array.SIZE_RATIO = 3;
 
-function main() {
-  Array.SIZE_RATIO = 3;
+// function main() {
+//   Array.SIZE_RATIO = 3;
 
-  let arr = new Array();
+//   let arr = new Array();
 
-  arr.push(3);
-  arr.push(5);
-  arr.push(15);
-  arr.push(19);
-  arr.push(45);
-  arr.push(10);
-  arr.pop();
-  arr.pop();
-  arr.pop();
+//   arr.push('tauhida');
 
-  console.log(arr[0]);
-}
+//   console.log(arr[0]); // prints undefined because the console log and push method are happening asynchronously and theres no default value in the array
 
-main();
+//   // the resize method increases/decreases the size and memory allocated to the array
+// }
+
+// main();
+
+// const errorThatNeverHappens = str => {
+//   let newVal = str.split(' ').join('%20');
+//   return newVal;
+// };
+
+// console.log(errorThatNeverHappens('www.thinkful.com /tauh ida parv een'));
+
+const number = input => {
+  let result = [];
+  for (let i of input) {
+    if (i >= 5) {
+      result.push(i);
+    }
+  }
+  return result;
+};
+
+console.log(number([4, 6, -3, 5, -2, 1]));
